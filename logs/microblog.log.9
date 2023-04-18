@@ -1,4 +1,11 @@
-2023-04-18 08:03:21,963 ERROR: Exception on /index [GET] [in /Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py:1744]
+2023-04-11 07:50:52,158 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:47]
+2023-04-11 08:10:30,938 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:47]
+2023-04-11 08:10:40,978 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:47]
+2023-04-12 11:28:17,671 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:47]
+2023-04-12 12:40:52,884 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:47]
+2023-04-12 12:41:37,634 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:47]
+2023-04-12 12:58:30,504 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:47]
+2023-04-12 12:58:31,808 ERROR: Exception on / [GET] [in /Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py:1744]
 Traceback (most recent call last):
   File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
     response = self.full_dispatch_request()
@@ -15,9 +22,9 @@ Traceback (most recent call last):
   File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jocokiss/flask_project/application/routes.py", line 28, in index
-    return render_template('index.html', title='Home', form=form, posts=posts)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/application/routes.py", line 31, in index
+    return render_template('index.html', title='Home', posts=posts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
     return _render(app, template, context)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -30,17 +37,16 @@ Traceback (most recent call last):
     raise rewrite_traceback_stack(source=source)
   File "/Users/jocokiss/flask_project/application/templates/index.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "/Users/jocokiss/flask_project/application/templates/base.html", line 32, in top-level template code
+  File "/Users/jocokiss/flask_project/application/templates/base.html", line 31, in top-level template code
     {% block content %}{% endblock %}
     ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jocokiss/flask_project/application/templates/index.html", line 21, in block 'content'
-    {{ post.author.username }} says: <b>{{ post.body }}</b></p>
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/application/templates/index.html", line 6, in block 'content'
+    {{ form.hidden_tag() }}
   File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/jinja2/environment.py", line 485, in getattr
     return getattr(obj, attribute)
            ^^^^^^^^^^^^^^^^^^^^^^^
-jinja2.exceptions.UndefinedError: 'post' is undefined
-2023-04-18 08:03:23,919 ERROR: Exception on /explore [GET] [in /Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py:1744]
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2023-04-12 12:58:37,970 ERROR: Exception on /index [GET] [in /Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py:1744]
 Traceback (most recent call last):
   File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
     response = self.full_dispatch_request()
@@ -57,9 +63,9 @@ Traceback (most recent call last):
   File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jocokiss/flask_project/application/routes.py", line 135, in explore
-    return render_template('index.html', title='Explore', posts=posts)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/application/routes.py", line 31, in index
+    return render_template('index.html', title='Home', posts=posts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
     return _render(app, template, context)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -72,17 +78,16 @@ Traceback (most recent call last):
     raise rewrite_traceback_stack(source=source)
   File "/Users/jocokiss/flask_project/application/templates/index.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "/Users/jocokiss/flask_project/application/templates/base.html", line 32, in top-level template code
+  File "/Users/jocokiss/flask_project/application/templates/base.html", line 31, in top-level template code
     {% block content %}{% endblock %}
     ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jocokiss/flask_project/application/templates/index.html", line 21, in block 'content'
-    {{ post.author.username }} says: <b>{{ post.body }}</b></p>
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/application/templates/index.html", line 6, in block 'content'
+    {{ form.hidden_tag() }}
   File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/jinja2/environment.py", line 485, in getattr
     return getattr(obj, attribute)
            ^^^^^^^^^^^^^^^^^^^^^^^
-jinja2.exceptions.UndefinedError: 'post' is undefined
-2023-04-18 08:03:25,810 ERROR: Exception on /explore [GET] [in /Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py:1744]
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2023-04-12 12:58:41,714 ERROR: Exception on /index [GET] [in /Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py:1744]
 Traceback (most recent call last):
   File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
     response = self.full_dispatch_request()
@@ -99,9 +104,9 @@ Traceback (most recent call last):
   File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jocokiss/flask_project/application/routes.py", line 135, in explore
-    return render_template('index.html', title='Explore', posts=posts)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/application/routes.py", line 31, in index
+    return render_template('index.html', title='Home', posts=posts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
     return _render(app, template, context)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -114,14 +119,12 @@ Traceback (most recent call last):
     raise rewrite_traceback_stack(source=source)
   File "/Users/jocokiss/flask_project/application/templates/index.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "/Users/jocokiss/flask_project/application/templates/base.html", line 32, in top-level template code
+  File "/Users/jocokiss/flask_project/application/templates/base.html", line 31, in top-level template code
     {% block content %}{% endblock %}
     ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jocokiss/flask_project/application/templates/index.html", line 21, in block 'content'
-    {{ post.author.username }} says: <b>{{ post.body }}</b></p>
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/application/templates/index.html", line 6, in block 'content'
+    {{ form.hidden_tag() }}
   File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/jinja2/environment.py", line 485, in getattr
     return getattr(obj, attribute)
            ^^^^^^^^^^^^^^^^^^^^^^^
-jinja2.exceptions.UndefinedError: 'post' is undefined
-2023-04-18 08:05:13,504 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:47]
+jinja2.exceptions.UndefinedError: 'form' is undefined
