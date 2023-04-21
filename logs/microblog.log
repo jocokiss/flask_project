@@ -118,3 +118,4 @@ werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.s
 2023-04-21 11:25:42,505 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:53]
 2023-04-21 12:28:25,485 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:53]
 2023-04-21 13:01:20,849 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:55]
+2023-04-21 15:55:38,454 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:57]
