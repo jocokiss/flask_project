@@ -1,19 +1,8 @@
-import json
-import requests
-from flask_babel import _
-from app import app
+from google.cloud import translate_v2
 
-def translate(text, source_language, dest_language):
-    if 'MS_TRANSLATOR_KEY' not in app.config or \
-            not app.config['MS_TRANSLATOR_KEY']:
-        return _('Error: the translation service is not configured.')
-    auth = {
-        'Ocp-Apim-Subscription-Key': app.config['MS_TRANSLATOR_KEY'],
-        'Ocp-Apim-Subscription-Region': 'westus2'}
-    r = requests.post(
-        'https://api.cognitive.microsofttranslator.com'
-        '/translate?api-version=3.0&from={}&to={}'.format(
-            source_language, dest_language), headers=auth, json=[{'Text': text}])
-    if r.status_code != 200:
-        return _('Error: the translation service failed.')
-    return r.json()[0]['translations'][0]['text']
+def translate(text, source_language, target_language):
+    credentials_path = '/Users/jocokiss/flask_project/microblog_translate.json' # update with your own path
+    client = translate_v2.Client.from_service_account_json(credentials_path)
+
+    result = client.translate(text,source_language=source_language, target_language=target_language)
+    return result['input'], result['translatedText']
