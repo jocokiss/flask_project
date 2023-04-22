@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "copper-pixel-384505",
+  "private_key_id": "a0446f5ae1d48a6a59c6ff6a6a8730ac3bb17efa",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDKtT/mo9+twYJ0\niyIxpIa0Xg8cfyDlZM0GXburjZUtOyIqR1BUTB9L2pHf98kcBn2ihP7lnjzjuq3i\n/MP9+1Hw0hgQlMQuvqa9mnP4XomEXcMXi2BS2TQSlzGevv28Hlm66taLG6Hyv3t3\nyswqPLcnSICkvenkr9MzOMIpPVvSC943nhaXCHtXqoVIzroCSrc/DLZ74Axl7bzY\nWD3LEj1R7RT6ybxbtZQCDXUE5APwLk8ufXRlSFGV6I6JcLlCVyetACvQyU5RKYhv\n63rKB1UNVLuumug7gNfjqYncegyKMCZb6N329j02skoXF229MPHTSb5TmPfFV/un\nG7eIDtlHAgMBAAECggEABh0+kWhGb3rv+2kNncNFAceHorZMR9Rh+lTYyfgEv1Yu\n8jAv0KeOQanNwNVYoCJV/HTYEE4cIS11Ueymi2z7U2noOJUl7/RZU2jAPoYqlURM\nhZq6S9c4PzUVY/YUYzUAfIq9DM8crNzF8hCCOnRc0lqgRdfUL3fL/kSHrPaL1eqZ\nigcDAZSUF4T+dM6/ofGhbQTD2FMYJ4DGIPsYKIB8511Dds7PttB5XIjl8r5sqZF7\np9f/zy3ni009WtETH3Z8+ODkIQeDPhQ+92bdz9TmOgUZDWWmk+haH7L+RctLh/0/\nXN8iJC9BHm9ltwCcX7QCgj+Nc6YKGc+LSIt0kUqKsQKBgQDkK6dHI+PwnpCzHAo/\nRpJeRXdIqVcm5Zghc05mx174rhgwqZi+v6Eal9NCp7w4pA1Gh/PeNsDso1JrRmip\nNf8IJDF0p+LfwH/W3fhiTbztd3QqSRxTbBeL624R8YxUAfEkWMI6vHpl9w4Zabse\nh5KO4YThb/ZY2wCPl+oipEWS3wKBgQDjbo9njecvaQcW2ha+XBGzTH+4BDM32Ikj\nvHtpOAW8+3+SN4rxSIpFZYC2tJgX2XEf2NCvmVH1olJ7B32S0gvGWGBc656NCXSP\n/OmZja55grY5rDo/8RdjiF5+4YCFf+3SLmYBo30gFZJ4zVlW9BGlZ2hvok1AswR4\nUmlA7qoumQKBgQCHnCZcksk7zpJD0auJdgEyRGkj53mj5Ztobiav0Vjxxk8cRQBC\nhpRSwN/P4u9sXpyBSfY4ISTCwEMQ/RThVPVRumkmY03lHH0ekGi6zGc4X+HL7A4I\nytqnz3Jo+b4kg871gkdWL4UzqwVXN07+UydZAlI+xpOMtgT8UxbWJfov0wKBgGDP\nejmxXNyAj6T5lr7XQC2bfa5eE1NNWCsfG0VRtJeaUtZx0DIfF8SsjVq4ixlz1MSi\nrUpiMFIoE4YNTTXHNX3rtrE3FtmgUb7NAL79YWyV6G2qU21Oeg9DSD4oTWYGa7yR\nRZii+CtFI4FKoCH0aOKInxsN8mZ9DYUOR4F9VnHZAoGBAKrwpOj+t3Anj2xz7ifU\nx6p+eNsbzD2jv6QLbS60Dh1rRuJjSbUCpyq57vtAsZ1ZwP7daI4viV49ByWpeJ3O\nDaUTgbS3GgFNX60LhZwCCh8/YJ0xHW1ewEpATXQbHrjwLF9gxbo8bx6o31DY8PcK\n34P2xHWSpX+U4+Q6qLgCz9Jc\n-----END PRIVATE KEY-----\n",
+  "client_email": "microblog-translation@copper-pixel-384505.iam.gserviceaccount.com",
+  "client_id": "110244482981662524191",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/microblog-translation%40copper-pixel-384505.iam.gserviceaccount.com"
+}

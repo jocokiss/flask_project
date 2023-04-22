@@ -1,63 +1,4 @@
-2023-04-18 08:05:23,143 ERROR: Exception on / [GET] [in /Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py:1744]
-Traceback (most recent call last):
-  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jocokiss/flask_project/application/routes.py", line 28, in index
-    return render_template('index.html', title='Home', form=form, posts=posts)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
-    return _render(app, template, context)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
-    rv = template.render(context)
-         ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/Users/jocokiss/flask_project/application/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/Users/jocokiss/flask_project/application/templates/base.html", line 32, in top-level template code
-    {% block content %}{% endblock %}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jocokiss/flask_project/application/templates/index.html", line 21, in block 'content'
-    {{ post.author.username }} says: <b>{{ post.body }}</b></p>
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/jinja2/environment.py", line 485, in getattr
-    return getattr(obj, attribute)
-           ^^^^^^^^^^^^^^^^^^^^^^^
-jinja2.exceptions.UndefinedError: 'post' is undefined
-2023-04-18 08:18:12,829 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:47]
-2023-04-18 08:31:13,386 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:47]
-2023-04-18 20:44:41,696 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:47]
-2023-04-18 20:45:16,673 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:47]
-2023-04-18 21:01:16,981 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:47]
-2023-04-18 21:01:36,532 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:47]
-2023-04-19 17:56:58,371 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:49]
-2023-04-19 18:38:23,175 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:49]
-2023-04-19 18:39:15,487 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:49]
-2023-04-19 19:01:29,945 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:49]
-2023-04-19 19:01:57,456 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:49]
-2023-04-19 19:02:17,859 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:49]
-2023-04-20 07:59:28,515 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:49]
-2023-04-21 08:29:12,206 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:51]
-2023-04-21 08:29:22,805 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:51]
-2023-04-21 08:29:32,272 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:51]
-2023-04-21 09:48:36,758 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:51]
-2023-04-21 09:48:44,121 ERROR: Exception on /login [GET] [in /Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py:1744]
+2023-04-21 09:53:10,441 ERROR: Exception on /login [GET] [in /Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py:1744]
 Traceback (most recent call last):
   File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
     response = self.full_dispatch_request()
@@ -95,4 +36,82 @@ Traceback (most recent call last):
   File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: login.html
-2023-04-21 09:53:08,866 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:51]
+2023-04-21 09:53:41,218 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:51]
+2023-04-21 09:53:42,120 ERROR: Exception on /login [GET] [in /Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/application/routes.py", line 56, in login
+    return render_template('login.html', title='Sign In', form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: login.html
+2023-04-21 10:26:04,335 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:51]
+2023-04-21 10:26:05,736 ERROR: Exception on /login [GET] [in /Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/application/routes.py", line 56, in login
+    return render_template('login.html', title='Sign In', form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jocokiss/flask_project/venv/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: login.html
+2023-04-21 10:30:16,493 INFO: Microblog startup [in /Users/jocokiss/flask_project/application/__init__.py:51]
