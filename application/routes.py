@@ -1,5 +1,5 @@
 from datetime import datetime
-from flask import render_template, flash, redirect, url_for, request, g
+from flask import render_template, flash, redirect, url_for, request, g, jsonify
 from flask_login import login_user, logout_user, current_user, login_required
 from langdetect import LangDetectException, detect
 from werkzeug.urls import url_parse
@@ -9,8 +9,7 @@ from application.forms import LoginForm, RegistrationForm, EditProfileForm, \
     EmptyForm, PostForm, ResetPasswordRequestForm, ResetPasswordForm
 from application.models import User, Post
 from application.email import send_password_reset_email
-
-
+from application.translate import translate
 
 
 @app.before_request
@@ -206,3 +205,10 @@ def unfollow(username):
         return redirect(url_for('user', username=username))
     else:
         return redirect(url_for('index'))
+
+@app.route('/translate', methods=['POST'])
+@login_required
+def translate_text():
+    return jsonify({'text': translate(request.form['text'],
+                                      request.form['source_language'],
+                                      request.form['target_language'])})

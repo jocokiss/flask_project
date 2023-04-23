@@ -5,4 +5,4 @@ def translate(text, source_language, target_language):
     client = translate_v2.Client.from_service_account_json(credentials_path)
 
     result = client.translate(text,source_language=source_language, target_language=target_language)
-    return result['input'], result['translatedText']
+    return result['translatedText']
