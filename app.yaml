@@ -1,1 +1,5 @@
 runtime: python311
+service: flask-app
+handlers:
+- url: /.*
+  script: auto
